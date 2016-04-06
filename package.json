@@ -1,0 +1,10 @@
+{
+  "name": "mynode-app",
+  "version": "0.0.1",
+  "description": "An example module to illustrate the usage of a package.json",
+  "author": "Sam Phomsopha <samphomsopha@gmail.com>",
+  "contributors": [{
+  "name": "Sam Phomsopha",
+  "email": "samphomsopha@gmail.com"
+}]
+}
