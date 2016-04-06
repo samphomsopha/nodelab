@@ -1,12 +1,10 @@
 FROM readytalk/nodejs
 
+  RUN mkdir /app
+  VOLUME ["/app"]
   WORKDIR /app
-  ADD package.json /app/
-  RUN npm install
-  ADD . /app
+  #ADD . /app
+  #RUN npm install
+  #RUN npm install express --save
 
-  #CMD []
-  #ENTRYPOINT ["/nodejs/bin/npm", "start"]
   ENTRYPOINT ["/nodejs/bin/node"]
-
-  http://blog.modulus.io/absolute-beginners-guide-to-nodejs
