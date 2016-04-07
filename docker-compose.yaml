@@ -1,0 +1,16 @@
+version: '2'
+services:
+  mydata:
+    build: ./docker/busybox
+    image: busybox
+    #container_name: mydata
+    volumes:
+    - .:/app:rw
+  nodejs:
+    build: ./docker/nodejs
+    image: nodejs
+    privileged: true
+    volumes_from:
+      - mydata
+    ports:
+      - "8080:8080"
