@@ -14,3 +14,12 @@ services:
       - mydata
     ports:
       - "8080:8080"
+  mongodb:
+    build: ./docker/mongodb
+    image: mymongo
+    privileged: true
+    command: --smallfiles
+    volumes:
+      - /mnt/sda1:/data/db:rw
+    ports:
+      - 27017:27017
